@@ -77,9 +77,9 @@ export default function SessionsPage() {
   const loadSessions = async () => {
     try {
       setLoadingState(true);
-        // Try API first
-        const res = await apiClient.get<any>('/api/sessions');
-        if (res?.success && Array.isArray(res.sessions)) {
+      // Try API first
+      const res = await apiClient.get<any>('/api/sessions');
+      if (res?.success && Array.isArray(res.sessions)) {
         // Sort by start time (newest first)
         const sortedSessions = res.sessions.sort((a: Session, b: Session) => {
           const dateA = isValidDate(a.startTime) ? new Date(a.startTime).getTime() : 0;
@@ -87,48 +87,48 @@ export default function SessionsPage() {
           return dateB - dateA;
         });
         setSessions(sortedSessions);
-          return;
-        }
+        return;
+      }
       // Fallback to localStorage
-        const found: Session[] = [];
-        if (typeof window !== 'undefined') {
-          for (const key of Object.keys(localStorage)) {
-            if (key.startsWith('session_')) {
-              try {
-                const s = JSON.parse(localStorage.getItem(key) || 'null');
-                if (s?.id) found.push(s);
-              } catch {}
-            }
+      const found: Session[] = [];
+      if (typeof window !== 'undefined') {
+        for (const key of Object.keys(localStorage)) {
+          if (key.startsWith('session_')) {
+            try {
+              const s = JSON.parse(localStorage.getItem(key) || 'null');
+              if (s?.id) found.push(s);
+            } catch { }
           }
+        }
         // Sort by start time
         found.sort((a, b) => {
           const dateA = isValidDate(a.startTime) ? new Date(a.startTime).getTime() : 0;
           const dateB = isValidDate(b.startTime) ? new Date(b.startTime).getTime() : 0;
           return dateB - dateA;
         });
-        }
-        setSessions(found);
-      } catch (e) {
+      }
+      setSessions(found);
+    } catch (e) {
       console.error('Failed to load sessions:', e);
-        // Last fallback to localStorage
-        const found: Session[] = [];
-        if (typeof window !== 'undefined') {
-          for (const key of Object.keys(localStorage)) {
-            if (key.startsWith('session_')) {
-              try {
-                const s = JSON.parse(localStorage.getItem(key) || 'null');
-                if (s?.id) found.push(s);
-              } catch {}
-            }
+      // Last fallback to localStorage
+      const found: Session[] = [];
+      if (typeof window !== 'undefined') {
+        for (const key of Object.keys(localStorage)) {
+          if (key.startsWith('session_')) {
+            try {
+              const s = JSON.parse(localStorage.getItem(key) || 'null');
+              if (s?.id) found.push(s);
+            } catch { }
           }
+        }
         found.sort((a, b) => {
           const dateA = isValidDate(a.startTime) ? new Date(a.startTime).getTime() : 0;
           const dateB = isValidDate(b.startTime) ? new Date(b.startTime).getTime() : 0;
           return dateB - dateA;
         });
-        }
-        setSessions(found);
-      } finally {
+      }
+      setSessions(found);
+    } finally {
       setLoadingState(false);
     }
   };
@@ -145,13 +145,13 @@ export default function SessionsPage() {
     try {
       console.log('🗑️ Deleting session:', confirmDeleteId);
       const response = await apiClient.delete<any>(`/api/sessions/${confirmDeleteId}`);
-      
+
       if (response.success) {
         console.log('✅ Session deleted successfully');
         setSessions((prev) => prev.filter((s) => s.id !== confirmDeleteId));
         setConfirmDeleteId(null);
         setErrorMessage(null);
-        
+
         // Also remove from localStorage
         if (typeof window !== 'undefined') {
           localStorage.removeItem(`session_${confirmDeleteId}`);
@@ -161,13 +161,13 @@ export default function SessionsPage() {
       }
     } catch (error: any) {
       console.error('❌ Failed to delete session:', error);
-      const errorMsg = error?.response?.data?.error 
-        || error?.response?.data?.message 
-        || error?.message 
+      const errorMsg = error?.response?.data?.error
+        || error?.response?.data?.message
+        || error?.message
         || 'Failed to delete session. The session may have already been deleted or does not exist.';
       setErrorMessage(errorMsg);
       setConfirmDeleteId(null);
-      
+
       // If session not found, remove it from the list anyway (it's already gone)
       if (error?.response?.status === 404) {
         console.warn('⚠️ Session not found (404), removing from list anyway');
@@ -200,7 +200,7 @@ export default function SessionsPage() {
         )
       );
       setEditingId(null);
-      
+
       // Also update localStorage
       if (typeof window !== 'undefined') {
         const session = sessions.find(s => s.id === sessionId);
@@ -295,13 +295,13 @@ export default function SessionsPage() {
       <header className="bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
           <h1 className="text-3xl font-bold text-brand-navy-900 tracking-tight">My Sessions</h1>
-            <button
-              onClick={() => router.push('/lobby')}
+          <button
+            onClick={() => router.push('/lobby')}
             className="px-4 py-2.5 min-h-[44px] text-sm font-semibold text-brand-navy-900 hover:text-brand-gold-500 active:opacity-70 transition-all duration-200 rounded-xl hover:bg-gray-100 active:bg-gray-200 touch-manipulation"
             style={{ WebkitTapHighlightColor: 'transparent' }}
-            >
+          >
             ← Back to Lobby
-            </button>
+          </button>
         </div>
       </header>
 
@@ -332,7 +332,7 @@ export default function SessionsPage() {
           </div>
         ) : (
           <div className="space-y-5">
-            {sessions.map((session) => (
+            {sessions.map((session, index) => (
               <div key={session.id} className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-brand-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1 min-w-0">
@@ -363,7 +363,23 @@ export default function SessionsPage() {
                     ) : (
                       <div className="flex items-center gap-3 mb-4 flex-wrap">
                         <h3 className="text-xl font-bold text-brand-navy-900 truncate">
-                          {session.name}
+                          {(() => {
+                            if (session.name.startsWith('Session')) {
+                              const practiceNum = sessions.length - index;
+                              if (isValidDate(session.startTime)) {
+                                return `Practise${practiceNum} ${new Date(session.startTime).toLocaleString('en-US', {
+                                  month: 'numeric',
+                                  day: 'numeric',
+                                  year: 'numeric',
+                                  hour: 'numeric',
+                                  minute: '2-digit',
+                                  hour12: true
+                                })}`;
+                              }
+                              return session.name.replace('Session', `Practise${practiceNum}`).replace(/:\d{2} (?=[AP]M)/, ' ');
+                            }
+                            return session.name;
+                          })()}
                         </h3>
                         {getStatusBadge(session)}
                       </div>
@@ -387,11 +403,11 @@ export default function SessionsPage() {
                       <div className="flex flex-col">
                         <span className="font-semibold text-gray-700 mb-1">Difficulty</span>
                         <span className="text-gray-600 capitalize">
-                          {session.quality === 'low' ? 'Easy' : 
-                           session.quality === 'medium' ? 'Medium' : 
-                           session.quality === 'high' ? 'Hard' : 
-                           session.quality}
-                      </span>
+                          {session.quality === 'low' ? 'Easy' :
+                            session.quality === 'medium' ? 'Medium' :
+                              session.quality === 'high' ? 'Hard' :
+                                session.quality}
+                        </span>
                       </div>
                     </div>
 
@@ -415,26 +431,32 @@ export default function SessionsPage() {
                     )}
                     {editingId !== session.id && (
                       <>
-                    <button
+                        <button
                           onClick={() => handleStartEdit(session)}
                           className="px-5 py-2.5 min-h-[44px] bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 active:bg-gray-300 active:scale-95 transition-all duration-200 text-sm font-medium whitespace-nowrap touch-manipulation"
                           style={{ WebkitTapHighlightColor: 'transparent' }}
-                    >
+                        >
                           ✏️ Edit
-                    </button>
-                    <button
+                        </button>
+                        <button
                           onClick={() => requestDelete(session.id)}
                           className="px-5 py-2.5 min-h-[44px] bg-red-50 text-red-700 rounded-xl hover:bg-red-100 active:bg-red-200 active:scale-95 transition-all duration-200 text-sm font-medium whitespace-nowrap touch-manipulation"
                           style={{ WebkitTapHighlightColor: 'transparent' }}
-                    >
+                        >
                           🗑️ Delete
-                    </button>
+                        </button>
+                        <button
+                          className="px-5 py-2.5 min-h-[44px] bg-blue-50 text-blue-700 rounded-xl hover:bg-blue-100 active:bg-blue-200 active:scale-95 transition-all duration-200 text-sm font-medium whitespace-nowrap touch-manipulation"
+                          style={{ WebkitTapHighlightColor: 'transparent' }}
+                        >
+                          📤 Share
+                        </button>
                       </>
                     )}
                   </div>
-                  </div>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         )}
       </main>

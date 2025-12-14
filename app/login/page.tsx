@@ -10,7 +10,7 @@ export default function LoginPage() {
   console.log('LOGIN PAGE MOUNTED');
 
   const router = useRouter();
-  const { login } = useAuth();
+  const { login, user } = useAuth();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -114,8 +114,8 @@ export default function LoginPage() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-center px-16 py-20 text-white">
-          <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl mb-6 shadow-2xl overflow-hidden">
+          <div className="flex items-center gap-6 mb-12">
+            <div className="flex-shrink-0 w-24 h-24 bg-white rounded-2xl shadow-2xl overflow-hidden flex items-center justify-center">
               <Image
                 src="/logo.png"
                 alt="Testify Logo"
@@ -124,11 +124,12 @@ export default function LoginPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="text-6xl font-bold mb-4 tracking-tight">Testify</h1>
-            <div className="w-24 h-1.5 bg-brand-gold-500 rounded-full mb-6"></div>
-            <p className="text-2xl text-gray-300 font-light mb-8">
-              AI-Powered Witness Training
-            </p>
+            <div>
+              <h1 className="text-6xl font-bold tracking-tight mb-2">Testify</h1>
+              <p className="text-xl text-gray-300 font-light max-w-sm leading-relaxed">
+                Your Ultimate Companion for Witness Preparation
+              </p>
+            </div>
           </div>
 
           <div className="space-y-6 max-w-md">
@@ -161,6 +162,23 @@ export default function LoginPage() {
                 <p className="text-gray-400 text-sm">Build skills through repeated practice</p>
               </div>
             </div>
+
+            {/* Contact Support Section */}
+            <div className="pt-8 mt-4 border-t border-white/10">
+              <div className="flex items-center gap-4 px-5 py-4 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 group cursor-pointer">
+                <div className="flex-shrink-0 w-10 h-10 bg-brand-gold-500/20 rounded-full flex items-center justify-center text-brand-gold-500 group-hover:scale-110 transition-transform">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div className="text-left">
+                  <p className="text-[10px] uppercase tracking-wider font-bold text-gray-400 mb-0.5">Contact Support</p>
+                  <a href="mailto:Jason.pok@ap.com.jo" className="text-base font-semibold text-white hover:text-brand-gold-500 transition-colors">
+                    Jason.pok@ap.com.jo
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -169,26 +187,32 @@ export default function LoginPage() {
       <div className="flex-1 flex items-center justify-center p-4 sm:p-8 relative z-10">
         <div className="w-full max-w-md">
           {/* Mobile Logo */}
-          <div className="lg:hidden text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-navy-900 rounded-2xl mb-4 shadow-xl overflow-hidden">
+          <div className="lg:hidden flex items-center justify-center gap-4 mb-8">
+            <div className="flex-shrink-0 w-14 h-14 bg-brand-navy-900 rounded-xl shadow-lg overflow-hidden flex items-center justify-center transform rotate-3">
               <Image
                 src="/logo.png"
                 alt="Testify Logo"
-                width={64}
-                height={64}
+                width={56}
+                height={56}
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="text-4xl font-bold text-brand-navy-900 mb-2 tracking-tight">
-              Testify
-            </h1>
-            <p className="text-gray-600 font-medium">AI-Powered Witness Training</p>
+            <div className="text-left">
+              <h1 className="text-3xl font-bold text-brand-navy-900 tracking-tight leading-none mb-1">
+                Testify
+              </h1>
+              <p className="text-xs text-gray-600 font-medium max-w-[200px] leading-snug">
+                Your Ultimate Companion for Witness Preparation
+              </p>
+            </div>
           </div>
 
           {/* Login Card */}
           <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-200/50 p-8 sm:p-10 animate-slide-up">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-brand-navy-900 mb-2">Welcome Back</h2>
+              <h2 className="text-3xl font-bold text-brand-navy-900 mb-2">
+                {user ? `Hello, ${user.name}` : 'Welcome Back'}
+              </h2>
               <p className="text-gray-600">Sign in to continue your training</p>
             </div>
 
@@ -440,6 +464,8 @@ export default function LoginPage() {
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </div>

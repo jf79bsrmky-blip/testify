@@ -101,7 +101,7 @@ function ReportContent() {
           sessionData = response.session;
           console.log('✅ Session loaded from API');
           console.log('   Transcript length from API:', sessionData?.transcript?.length || 0);
-          
+
           // If API session has no transcript, try localStorage as backup
           if (sessionData && (!sessionData.transcript || sessionData.transcript.length === 0)) {
             console.warn('⚠️ API session has no transcript, checking localStorage...');
@@ -124,15 +124,15 @@ function ReportContent() {
         }
       } catch (apiError: any) {
         console.warn('⚠️ Failed to load from API, trying localStorage...', apiError?.response?.status);
-        
+
         // Fallback to localStorage
         if (typeof window !== 'undefined') {
-              const storedSession = localStorage.getItem(`session_${sessionId}`);
-              if (storedSession) {
-                try {
-                  sessionData = JSON.parse(storedSession);
-                  console.log('✅ Session loaded from localStorage');
-                  console.log('   Transcript length from localStorage:', sessionData?.transcript?.length || 0);
+          const storedSession = localStorage.getItem(`session_${sessionId}`);
+          if (storedSession) {
+            try {
+              sessionData = JSON.parse(storedSession);
+              console.log('✅ Session loaded from localStorage');
+              console.log('   Transcript length from localStorage:', sessionData?.transcript?.length || 0);
             } catch (parseError) {
               console.error('Failed to parse stored session:', parseError);
             }
@@ -201,13 +201,13 @@ function ReportContent() {
 
       if (analysisResponse.success && analysisResponse.analysis) {
         console.log('✅ Analysis generated successfully');
-        
+
         // Transform analysis response to report format
         const analysis = analysisResponse.analysis;
         const overallScore = Math.round(
           (analysis.accuracy + analysis.clarity + analysis.completeness + analysis.consistency) / 4
         );
-        
+
         const reportData: SessionReportData = {
           overallScore: overallScore,
           metrics: {
@@ -223,7 +223,7 @@ function ReportContent() {
           summary: analysis.summary || 'Analysis completed successfully.',
           flaggedSegments: analysis.flaggedSegments || [],
         };
-        
+
         setReport(reportData);
 
         // Save the report back to the session
@@ -295,8 +295,7 @@ function ReportContent() {
     } catch (error) {
       console.error('❌ Error opening print dialog:', error);
       setFatalError(
-        `Failed to open print dialog: ${
-          error instanceof Error ? error.message : 'Unknown error'
+        `Failed to open print dialog: ${error instanceof Error ? error.message : 'Unknown error'
         }`,
       );
     }
@@ -410,22 +409,20 @@ function ReportContent() {
           <div className="flex gap-8 overflow-x-auto">
             <button
               onClick={() => setActiveTab('overview')}
-              className={`py-4 px-2 min-h-[44px] border-b-3 font-semibold transition-all duration-200 whitespace-nowrap touch-manipulation ${
-                activeTab === 'overview'
+              className={`py-4 px-2 min-h-[44px] border-b-3 font-semibold transition-all duration-200 whitespace-nowrap touch-manipulation ${activeTab === 'overview'
                   ? 'border-brand-navy-900 text-brand-navy-900'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 active:opacity-70'
-              }`}
+                }`}
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               📊 Analysis
             </button>
             <button
               onClick={() => setActiveTab('transcript')}
-              className={`py-4 px-2 min-h-[44px] border-b-3 font-semibold transition-all duration-200 whitespace-nowrap touch-manipulation ${
-                activeTab === 'transcript'
+              className={`py-4 px-2 min-h-[44px] border-b-3 font-semibold transition-all duration-200 whitespace-nowrap touch-manipulation ${activeTab === 'transcript'
                   ? 'border-brand-navy-900 text-brand-navy-900'
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 active:opacity-70'
-              }`}
+                }`}
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               💬 Transcript
@@ -451,43 +448,41 @@ function ReportContent() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Analysis Tab */}
         <div className={`space-y-8 ${activeTab === 'overview' ? 'block' : 'hidden print:block'}`}>
-            {/* Section Header for Print */}
-            <div className="hidden print:block mb-6">
-              <h2 className="text-2xl font-bold text-brand-navy-900 border-b-2 border-brand-navy-900 pb-3">Analysis</h2>
-            </div>
-            
-            {/* Show message if no valid analysis */}
-            {!hasValidAnalysis && (
-              <div className="flex items-center justify-center min-h-[400px]">
-                <div className="text-center">
-                  <div className="inline-block p-6 bg-gray-100 rounded-3xl mb-6">
-                    <span className="text-6xl">📊</span>
-                  </div>
-                  <h2 className="text-2xl font-bold text-gray-700 mb-3">Not Enough Data for Analysis</h2>
-                  <p className="text-gray-600 text-lg max-w-md">
-                    The session transcript does not contain enough witness responses to perform a meaningful analysis. 
-                    Please conduct a longer interview session with more detailed responses.
-                  </p>
-                </div>
-              </div>
-            )}
+          {/* Section Header for Print */}
+          <div className="hidden print:block mb-6">
+            <h2 className="text-2xl font-bold text-brand-navy-900 border-b-2 border-brand-navy-900 pb-3">Analysis</h2>
+          </div>
 
-            {/* Overall Score */}
-            {hasValidAnalysis && (
-              <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-brand text-center page-break-inside-avoid">
+          {/* Show message if no valid analysis */}
+          {!hasValidAnalysis && (
+            <div className="flex items-center justify-center min-h-[400px]">
+              <div className="text-center">
+                <div className="inline-block p-6 bg-gray-100 rounded-3xl mb-6">
+                  <span className="text-6xl">📊</span>
+                </div>
+                <h2 className="text-2xl font-bold text-gray-700 mb-3">Not Enough Data for Analysis</h2>
+                <p className="text-gray-600 text-lg max-w-md">
+                  The session transcript does not contain enough witness responses to perform a meaningful analysis.
+                  Please conduct a longer interview session with more detailed responses.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Analysis Data Grid */}
+          {hasValidAnalysis && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {/* Overall Score */}
+              <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-brand text-center page-break-inside-avoid flex flex-col justify-center transition-all duration-300 hover:shadow-brand hover:-translate-y-1">
                 <h2 className="text-lg font-semibold text-gray-600 mb-6">Overall Performance</h2>
                 <div className={`text-7xl font-bold mb-3 ${getScoreColor(report.overallScore)}`}>
                   {report.overallScore}
                 </div>
                 <div className="text-gray-600 text-lg">out of 100</div>
               </div>
-            )}
 
-            {/* Metrics Grid */}
-            {hasValidAnalysis && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* 1. Accuracy */}
-              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-brand transition-all duration-300">
+              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-semibold text-gray-700 text-lg">Accuracy</h3>
                   <span className="text-3xl">🎯</span>
@@ -504,7 +499,7 @@ function ReportContent() {
               </div>
 
               {/* 2. Clarity */}
-              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-brand transition-all duration-300">
+              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-semibold text-gray-700 text-lg">Clarity</h3>
                   <span className="text-3xl">💬</span>
@@ -521,7 +516,7 @@ function ReportContent() {
               </div>
 
               {/* 3. Completeness */}
-              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-brand transition-all duration-300">
+              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-semibold text-gray-700 text-lg">Completeness</h3>
                   <span className="text-3xl">📋</span>
@@ -538,7 +533,7 @@ function ReportContent() {
               </div>
 
               {/* 4. Consistency */}
-              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-brand transition-all duration-300">
+              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-semibold text-gray-700 text-lg">Consistency</h3>
                   <span className="text-3xl">🔄</span>
@@ -554,67 +549,67 @@ function ReportContent() {
                 </div>
               </div>
             </div>
-            )}
+          )}
 
-            {/* Session Summary */}
-            {report.summary && (
-              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6 flex items-center gap-3">
-                  <span className="text-3xl">📋</span> Session Summary
-                </h3>
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
-                  <p className="text-gray-800 leading-relaxed">{report.summary}</p>
-                </div>
+          {/* Session Summary */}
+          {report.summary && (
+            <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+              <h3 className="text-2xl font-bold text-brand-navy-900 mb-6 flex items-center gap-3">
+                <span className="text-3xl">📋</span> Session Summary
+              </h3>
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
+                <p className="text-gray-800 leading-relaxed">{report.summary}</p>
               </div>
-            )}
+            </div>
+          )}
 
-            {/* Flagged Segments */}
-            {report.flaggedSegments && report.flaggedSegments.length > 0 && (
-              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">Flagged Segments</h3>
-                <div className="space-y-4">
-                  {report.flaggedSegments.map((segment, index) => (
-                    <div key={index} className="border-2 border-red-500 rounded-xl p-4 bg-red-50">
-                      {/* Title with Time on the same line */}
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="text-xs font-medium text-red-700">
-                          {segment.time || segment.timestamp || 'N/A'}
-                        </span>
-                        <div className="font-semibold text-red-700 text-lg">
-                          {segment.title || segment.reason}
-                        </div>
-                      </div>
-                      
-                      {/* Note/Explanation */}
-                      {segment.snippet && (
-                        <div className="text-gray-800 leading-relaxed">
-                          {segment.snippet}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Recommendations */}
-            {report.recommendations && report.recommendations.length > 0 && (
-              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6 flex items-center gap-3">
-                  <span className="text-3xl">💡</span> Recommendations
-                </h3>
-                <ul className="space-y-4">
-                  {report.recommendations.map((rec, index) => (
-                    <li key={index} className="flex gap-4 p-3 bg-yellow-50 rounded-xl border border-yellow-200">
-                      <span className="flex-shrink-0 w-7 h-7 flex items-center justify-center bg-brand-gold-500 text-white font-bold rounded-full text-sm">
-                        {index + 1}
+          {/* Flagged Segments */}
+          {report.flaggedSegments && report.flaggedSegments.length > 0 && (
+            <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+              <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">Flagged Segments</h3>
+              <div className="space-y-4">
+                {report.flaggedSegments.map((segment, index) => (
+                  <div key={index} className="border-2 border-red-500 rounded-xl p-4 bg-red-50">
+                    {/* Title with Time on the same line */}
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs font-medium text-red-700">
+                        {segment.time || segment.timestamp || 'N/A'}
                       </span>
-                      <span className="text-gray-700 leading-relaxed pt-0.5">{rec}</span>
-                    </li>
-                  ))}
-                </ul>
+                      <div className="font-semibold text-red-700 text-lg">
+                        {segment.title || segment.reason}
+                      </div>
+                    </div>
+
+                    {/* Note/Explanation */}
+                    {segment.snippet && (
+                      <div className="text-gray-800 leading-relaxed">
+                        {segment.snippet}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
-            )}
+            </div>
+          )}
+
+          {/* Recommendations */}
+          {report.recommendations && report.recommendations.length > 0 && (
+            <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+              <h3 className="text-2xl font-bold text-brand-navy-900 mb-6 flex items-center gap-3">
+                <span className="text-3xl">💡</span> Recommendations
+              </h3>
+              <ul className="space-y-4">
+                {report.recommendations.map((rec, index) => (
+                  <li key={index} className="flex gap-4 p-3 bg-yellow-50 rounded-xl border border-yellow-200">
+                    <span className="flex-shrink-0 w-7 h-7 flex items-center justify-center bg-brand-gold-500 text-white font-bold rounded-full text-sm">
+                      {index + 1}
+                    </span>
+                    <span className="text-gray-700 leading-relaxed pt-0.5">{rec}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
 
@@ -624,50 +619,49 @@ function ReportContent() {
           <div className="hidden print:block mb-6">
             <h2 className="text-2xl font-bold text-brand-navy-900 border-b-2 border-brand-navy-900 pb-3">Transcript</h2>
           </div>
-            <h3 className="text-2xl font-bold text-brand-navy-900 mb-6 flex items-center gap-3">
-              <span className="text-3xl">💬</span> Full Transcript
-            </h3>
-            {session.transcript && session.transcript.length > 0 ? (
-              <div className="space-y-4">
-                {session.transcript.map((entry) => {
-                  // Handle both old format (user/avatar) and new format (witness/interviewer)
-                  const isWitness = entry.speaker === 'witness' || entry.speaker === 'user';
-                  const isInterviewer = entry.speaker === 'interviewer' || entry.speaker === 'avatar';
-                  
-                  return (
+          <h3 className="text-2xl font-bold text-brand-navy-900 mb-6 flex items-center gap-3">
+            <span className="text-3xl">💬</span> Full Transcript
+          </h3>
+          {session.transcript && session.transcript.length > 0 ? (
+            <div className="space-y-4">
+              {session.transcript.map((entry) => {
+                // Handle both old format (user/avatar) and new format (witness/interviewer)
+                const isWitness = entry.speaker === 'witness' || entry.speaker === 'user';
+                const isInterviewer = entry.speaker === 'interviewer' || entry.speaker === 'avatar';
+
+                return (
+                  <div
+                    key={entry.id}
+                    className={`flex ${isInterviewer ? 'justify-start' : 'justify-end'}`}
+                  >
                     <div
-                      key={entry.id}
-                      className={`flex ${isInterviewer ? 'justify-start' : 'justify-end'}`}
-                    >
-                      <div
-                        className={`p-4 rounded-2xl transition-all duration-200 max-w-[75%] shadow-sm ${
-                          isInterviewer
-                            ? 'bg-gray-100 text-gray-900' // Interviewer on left - matches live page
-                            : 'bg-gray-700 text-white' // Witness on right - matches live page
+                      className={`p-4 rounded-2xl transition-all duration-200 max-w-[75%] shadow-sm ${isInterviewer
+                          ? 'bg-gray-100 text-gray-900' // Interviewer on left - matches live page
+                          : 'bg-gray-700 text-white' // Witness on right - matches live page
                         }`}
-                      >
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="font-medium text-sm">
-                            {isInterviewer ? 'Interviewer' : 'You'}
-                          </span>
-                          <span className={`text-xs ${isInterviewer ? 'text-gray-500' : 'text-gray-300'}`}>
-                            {entry.timestamp}
-                          </span>
-                        </div>
-                        <div className="text-sm leading-relaxed">{entry.text}</div>
+                    >
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="font-medium text-sm">
+                          {isInterviewer ? 'Interviewer' : 'You'}
+                        </span>
+                        <span className={`text-xs ${isInterviewer ? 'text-gray-500' : 'text-gray-300'}`}>
+                          {entry.timestamp}
+                        </span>
                       </div>
+                      <div className="text-sm leading-relaxed">{entry.text}</div>
                     </div>
-                  );
-                })}
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <div className="inline-block p-6 bg-gray-100 rounded-3xl mb-4">
+                <span className="text-6xl">📝</span>
               </div>
-            ) : (
-              <div className="text-center py-12">
-                <div className="inline-block p-6 bg-gray-100 rounded-3xl mb-4">
-                  <span className="text-6xl">📝</span>
-                </div>
-                <p className="text-gray-600 text-lg">No transcript available</p>
-              </div>
-            )}
+              <p className="text-gray-600 text-lg">No transcript available</p>
+            </div>
+          )}
         </div>
       </main>
     </div>

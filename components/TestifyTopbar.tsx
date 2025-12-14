@@ -15,7 +15,6 @@ export default function TestifyTopbar() {
   };
 
   const navItems = [
-    { label: 'Lobby', path: '/lobby', icon: '🏠' },
     { label: 'Sessions', path: '/sessions', icon: '📝' },
     { label: 'Settings', path: '/settings', icon: '⚙️' },
   ];
@@ -42,7 +41,7 @@ export default function TestifyTopbar() {
             </div>
             <div>
               <h1 className="text-xl font-bold text-brand-navy-900 tracking-tight">Testify</h1>
-              <p className="text-xs text-gray-500 font-medium">AI Interview Training</p>
+              <p className="text-xs text-gray-500 font-medium">Your Ultimate Companion fir Witness Preparation</p>
             </div>
           </div>
 

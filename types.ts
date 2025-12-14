@@ -116,13 +116,13 @@ export interface Avatar {
 
 export const AVAILABLE_AVATARS: Avatar[] = [
   // Men (Lawyers)
-  { id: 'Dexter_Lawyer_Sitting_public', name: 'Dexter' },
-  { id: 'Pedro_Chair_Sitting_public', name: 'Pedro' },
-  { id: 'Anthony_Chair_Sitting_public', name: 'Anthony' },
-  { id: 'Graham_Chair_Sitting_public', name: 'Graham' },
+  { id: 'Dexter_Lawyer_Sitting_public', name: 'Dexter-English-Male' },
+  { id: 'Pedro_Chair_Sitting_public', name: 'Pedro-Mexican-Male' },
+  { id: 'Anthony_Chair_Sitting_public', name: 'Anthony-Argentine-Male' },
+  { id: 'Graham_Chair_Sitting_public', name: 'Graham-American-Male' },
   // Women (Lawyers)
-  { id: 'Judy_Lawyer_Sitting2_public', name: 'Judy' },
-  { id: 'Anastasia_Chair_Sitting_public', name: 'Anastasia' },
+  { id: 'Judy_Lawyer_Sitting2_public', name: 'Judy-American-Female' },
+  { id: 'Anastasia_Chair_Sitting_public', name: 'Anastasia-Greek-Female' },
 ];
 
 
