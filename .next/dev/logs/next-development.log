@@ -1,0 +1,563 @@
+[00:04:13.526] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:04:13.719] Browser LOG     LOGIN PAGE MOUNTED
+[00:04:46.803] Browser LOG     LOGIN PAGE MOUNTED
+[00:04:46.803] Browser LOG     LOGIN PAGE MOUNTED
+[00:04:48.587] Browser LOG     LOGIN PAGE MOUNTED
+[00:04:48.587] Browser LOG     LOGIN PAGE MOUNTED
+[00:05:11.523] Browser LOG     📚 No file uploaded, using default knowledge base
+[00:05:11.523] Browser LOG     ✅ Using default knowledge base, ID: 00000000-0000-0000-0000-000000000001
+[00:05:11.523] Browser LOG        - Default KB: Legal Interview Protocol
+[00:05:11.523] Browser LOG        - This KB will be converted to HeyGen KB when session starts
+[00:05:11.523] Browser LOG        - KB ID will be stored in session as knowledgeBaseId
+[00:05:11.523] Browser LOG     🔍 Pre-session creation check - kbId: 00000000-0000-0000-0000-000000000001
+[00:05:11.523] Browser LOG     📝 Creating session with data: {"avatarId":"Dexter_Lawyer_Sitting_public","difficulty":"medium","knowledgeBaseId":"00000000-0000-0000-0000-000000000001","language":"en-US","quality":"medium","userId":"1"}
+[00:05:11.523] Browser LOG     📚 Session will be created with knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:05:11.523] Browser LOG     ✅ Session created: {"session":{"avatarId":"Dexter_Lawyer_Sitting_public","difficulty":"medium","id":"9d365cc3-0909-47f8-8503-90686b3a4251","knowledgeBaseId":"00000000-0000-0000-0000-000000000001","language":"en-US","name":"Session 12/15/2025, 1:30:43 AM","quality":"medium","startTime":"2025-12-14T22:30:43.808Z","transcript":[],"userId":"1"},"success":true,"timestamp":"2025-12-14T22:30:43.808Z"}
+[00:05:11.523] Browser LOG     💾 Session stored in localStorage
+[00:05:12.003] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:05:12.003] Browser LOG     ⏸️ Waiting for session config...
+[00:05:12.003] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:05:12.003] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:05:12.003] Browser LOG     🌍 Selected language: en-US
+[00:05:12.003] Browser LOG     📝 Using language code for STT: en
+[00:05:12.003] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:05:12.003] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:05:12.003] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:05:12.003] Browser LOG        - Language for KB: en-US
+[00:05:12.003] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:05:12.003] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:05:12.003] Browser LOG        - Is HeyGen KB: false
+[00:05:12.003] Browser LOG        - Cached: false
+[00:05:12.003] Browser LOG     📋 Session language (full locale): en-US
+[00:05:12.003] Browser LOG     📋 STT language code: en
+[00:05:12.003] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:05:12.003] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:05:12.003] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:05:12.003] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:05:12.003] Browser LOG     🎬 startSession function called
+[00:05:12.003] Browser LOG     🎭 Starting HeyGen session...
+[00:05:12.003] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:05:12.003] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:05:12.003] Browser LOG     📊 Session state at start: inactive
+[00:05:12.003] Browser LOG     🔑 Fetching HeyGen token...
+[00:05:12.003] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:05:40.008] Browser LOG     🧹 useEffect cleanup: setting cancelled flag
+[00:06:30.817] Browser LOG     LOGIN PAGE MOUNTED
+[00:06:34.456] Browser LOG     LOGIN PAGE MOUNTED
+[00:06:34.456] Browser LOG     LOGIN PAGE MOUNTED
+[00:08:10.836] Browser LOG     LOGIN PAGE MOUNTED
+[00:08:10.836] Browser LOG     LOGIN PAGE MOUNTED
+[00:09:23.142] Browser LOG     📚 No file uploaded, using default knowledge base
+[00:09:23.142] Browser LOG     ✅ Using default knowledge base, ID: 00000000-0000-0000-0000-000000000001
+[00:09:23.142] Browser LOG        - Default KB: Legal Interview Protocol
+[00:09:23.142] Browser LOG        - This KB will be converted to HeyGen KB when session starts
+[00:09:23.142] Browser LOG        - KB ID will be stored in session as knowledgeBaseId
+[00:09:23.142] Browser LOG     🔍 Pre-session creation check - kbId: 00000000-0000-0000-0000-000000000001
+[00:09:23.142] Browser LOG     📝 Creating session with data: {"avatarId":"Dexter_Lawyer_Sitting_public","difficulty":"medium","knowledgeBaseId":"00000000-0000-0000-0000-000000000001","language":"en-US","quality":"medium","userId":"1"}
+[00:09:23.142] Browser LOG     📚 Session will be created with knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:23.142] Browser LOG     ✅ Session created: {"session":{"avatarId":"Dexter_Lawyer_Sitting_public","difficulty":"medium","id":"fecf918e-d8b8-4814-bba1-174d1fca26c9","knowledgeBaseId":"00000000-0000-0000-0000-000000000001","language":"en-US","name":"Session 12/15/2025, 1:34:55 AM","quality":"medium","startTime":"2025-12-14T22:34:55.374Z","transcript":[],"userId":"1"},"success":true,"timestamp":"2025-12-14T22:34:55.374Z"}
+[00:09:23.142] Browser LOG     💾 Session stored in localStorage
+[00:09:23.142] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:23.142] Browser LOG     ⏸️ Waiting for session config...
+[00:09:23.142] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:09:23.142] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:09:23.142] Browser LOG     🌍 Selected language: en-US
+[00:09:23.142] Browser LOG     📝 Using language code for STT: en
+[00:09:23.142] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:23.142] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:09:23.142] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:09:23.142] Browser LOG        - Language for KB: en-US
+[00:09:23.142] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:09:23.142] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:09:23.142] Browser LOG        - Is HeyGen KB: false
+[00:09:23.142] Browser LOG        - Cached: false
+[00:09:23.142] Browser LOG     📋 Session language (full locale): en-US
+[00:09:23.142] Browser LOG     📋 STT language code: en
+[00:09:23.142] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:09:23.142] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:23.142] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:23.142] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:23.142] Browser LOG     🎬 startSession function called
+[00:09:23.142] Browser LOG     🎭 Starting HeyGen session...
+[00:09:23.142] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:09:23.142] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:09:23.142] Browser LOG     📊 Session state at start: inactive
+[00:09:23.142] Browser LOG     🔑 Fetching HeyGen token...
+[00:09:23.142] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:09:25.316] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:25.317] Browser LOG     ⏸️ Waiting for session config...
+[00:09:25.317] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:09:25.317] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:09:25.317] Browser LOG     🌍 Selected language: en-US
+[00:09:25.317] Browser LOG     📝 Using language code for STT: en
+[00:09:25.317] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:25.317] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:09:25.317] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:09:25.317] Browser LOG        - Language for KB: en-US
+[00:09:25.317] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:09:25.317] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:09:25.317] Browser LOG        - Is HeyGen KB: false
+[00:09:25.317] Browser LOG        - Cached: false
+[00:09:25.317] Browser LOG     📋 Session language (full locale): en-US
+[00:09:25.317] Browser LOG     📋 STT language code: en
+[00:09:25.317] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:09:25.317] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:25.317] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:25.317] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:25.317] Browser LOG     🎬 startSession function called
+[00:09:25.317] Browser LOG     🎭 Starting HeyGen session...
+[00:09:25.317] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:09:25.317] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:09:25.317] Browser LOG     📊 Session state at start: inactive
+[00:09:25.317] Browser LOG     🔑 Fetching HeyGen token...
+[00:09:25.317] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:09:27.228] Browser LOG     🔍 Building transcript for saving: {"messageTimesCount":0,"messagesCount":0,"sessionTime":1,"transcriptStateLength":0}
+[00:09:27.228] Browser LOG     📝 Fresh transcript built: {"interviewerCount":0,"length":0,"sampleEntries":[],"witnessCount":0}
+[00:09:27.228] Browser LOG     ✅ Final transcript to save: {"length":0,"source":"empty"}
+[00:09:27.228] Browser ERROR   ❌ Cannot save session: transcript is empty
+[00:09:27.228] Browser ERROR      Messages count: 0
+[00:09:27.228] Browser ERROR      Messages: []
+[00:09:27.228] Browser ERROR      Transcript state length: 0
+[00:09:27.228] Browser ERROR      Fresh transcript length: 0
+[00:09:27.402] Browser LOG     🧹 useEffect cleanup: setting cancelled flag
+[00:09:27.402] Browser LOG     ✅ Auth loaded and authenticated, loading session report...
+[00:09:27.402] Browser LOG     📊 Loading session report for: fecf918e-d8b8-4814-bba1-174d1fca26c9
+[00:09:27.402] Browser LOG     ✅ Session loaded from API
+[00:09:27.402] Browser LOG        Transcript length from API: 0
+[00:09:27.402] Browser WARN    ⚠️ API session has no transcript, checking localStorage...
+[00:09:27.402] Browser LOG     ⚠️ No report found, generating analysis...
+[00:09:27.402] Browser LOG     🔍 Generating analysis for session...
+[00:09:27.402] Browser LOG        Transcript entries: 0
+[00:09:27.402] Browser WARN    ⚠️ No transcript available, returning empty analysis
+[00:09:39.205] Browser LOG     🗑️ Deleting session: fecf918e-d8b8-4814-bba1-174d1fca26c9
+[00:09:39.205] Browser LOG     ✅ Session deleted successfully
+[00:09:42.270] Browser LOG     🗑️ Deleting session: 9d365cc3-0909-47f8-8503-90686b3a4251
+[00:09:42.271] Browser LOG     ✅ Session deleted successfully
+[00:09:46.823] Browser LOG     📚 No file uploaded, using default knowledge base
+[00:09:46.823] Browser LOG     ✅ Using default knowledge base, ID: 00000000-0000-0000-0000-000000000001
+[00:09:46.823] Browser LOG        - Default KB: Legal Interview Protocol
+[00:09:46.823] Browser LOG        - This KB will be converted to HeyGen KB when session starts
+[00:09:46.823] Browser LOG        - KB ID will be stored in session as knowledgeBaseId
+[00:09:46.823] Browser LOG     🔍 Pre-session creation check - kbId: 00000000-0000-0000-0000-000000000001
+[00:09:46.823] Browser LOG     📝 Creating session with data: {"avatarId":"Dexter_Lawyer_Sitting_public","difficulty":"medium","knowledgeBaseId":"00000000-0000-0000-0000-000000000001","language":"en-US","quality":"medium","userId":"1"}
+[00:09:46.823] Browser LOG     📚 Session will be created with knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:46.823] Browser LOG     ✅ Session created: {"session":{"avatarId":"Dexter_Lawyer_Sitting_public","difficulty":"medium","id":"271c6811-377f-4e5c-9add-28d429420c5e","knowledgeBaseId":"00000000-0000-0000-0000-000000000001","language":"en-US","name":"Session 12/15/2025, 1:35:19 AM","quality":"medium","startTime":"2025-12-14T22:35:19.058Z","transcript":[],"userId":"1"},"success":true,"timestamp":"2025-12-14T22:35:19.058Z"}
+[00:09:46.823] Browser LOG     💾 Session stored in localStorage
+[00:09:46.823] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:46.823] Browser LOG     ⏸️ Waiting for session config...
+[00:09:46.823] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:09:46.823] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:09:46.823] Browser LOG     🌍 Selected language: en-US
+[00:09:46.823] Browser LOG     📝 Using language code for STT: en
+[00:09:46.823] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:46.823] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:09:46.823] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:09:46.823] Browser LOG        - Language for KB: en-US
+[00:09:46.823] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:09:46.823] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:09:46.823] Browser LOG        - Is HeyGen KB: false
+[00:09:46.823] Browser LOG        - Cached: false
+[00:09:46.823] Browser LOG     📋 Session language (full locale): en-US
+[00:09:46.823] Browser LOG     📋 STT language code: en
+[00:09:46.823] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:09:46.823] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:46.823] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:46.823] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:46.823] Browser LOG     🎬 startSession function called
+[00:09:46.823] Browser LOG     🎭 Starting HeyGen session...
+[00:09:46.823] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:09:46.823] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:09:46.823] Browser LOG     📊 Session state at start: inactive
+[00:09:46.823] Browser LOG     🔑 Fetching HeyGen token...
+[00:09:46.823] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:09:50.084] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:50.084] Browser LOG     ⏸️ Waiting for session config...
+[00:09:50.084] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:09:50.084] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:09:50.084] Browser LOG     🌍 Selected language: en-US
+[00:09:50.085] Browser LOG     📝 Using language code for STT: en
+[00:09:50.085] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:50.085] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:09:50.085] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:09:50.085] Browser LOG        - Language for KB: en-US
+[00:09:50.085] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:09:50.085] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:09:50.085] Browser LOG        - Is HeyGen KB: false
+[00:09:50.085] Browser LOG        - Cached: false
+[00:09:50.085] Browser LOG     📋 Session language (full locale): en-US
+[00:09:50.085] Browser LOG     📋 STT language code: en
+[00:09:50.085] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:09:50.085] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:50.085] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:50.085] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:50.085] Browser LOG     🎬 startSession function called
+[00:09:50.085] Browser LOG     🎭 Starting HeyGen session...
+[00:09:50.085] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:09:50.085] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:09:50.085] Browser LOG     📊 Session state at start: inactive
+[00:09:50.085] Browser LOG     🔑 Fetching HeyGen token...
+[00:09:50.085] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:09:50.742] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:50.742] Browser LOG     ⏸️ Waiting for session config...
+[00:09:50.742] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:09:50.742] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:09:50.742] Browser LOG     🌍 Selected language: en-US
+[00:09:50.742] Browser LOG     📝 Using language code for STT: en
+[00:09:50.742] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:50.742] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:09:50.742] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:09:50.742] Browser LOG        - Language for KB: en-US
+[00:09:50.742] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:09:50.742] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:09:50.742] Browser LOG        - Is HeyGen KB: false
+[00:09:50.742] Browser LOG        - Cached: false
+[00:09:50.742] Browser LOG     📋 Session language (full locale): en-US
+[00:09:50.742] Browser LOG     📋 STT language code: en
+[00:09:50.742] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:09:50.742] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:50.742] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:50.742] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:50.742] Browser LOG     🎬 startSession function called
+[00:09:50.742] Browser LOG     🎭 Starting HeyGen session...
+[00:09:50.742] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:09:50.742] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:09:50.742] Browser LOG     📊 Session state at start: inactive
+[00:09:50.742] Browser LOG     🔑 Fetching HeyGen token...
+[00:09:50.742] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:09:50.958] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:50.958] Browser LOG     ⏸️ Waiting for session config...
+[00:09:50.958] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:09:50.958] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:09:50.958] Browser LOG     🌍 Selected language: en-US
+[00:09:50.958] Browser LOG     📝 Using language code for STT: en
+[00:09:50.958] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:50.958] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:09:50.958] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:09:50.958] Browser LOG        - Language for KB: en-US
+[00:09:50.958] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:09:50.958] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:09:50.958] Browser LOG        - Is HeyGen KB: false
+[00:09:50.958] Browser LOG        - Cached: false
+[00:09:50.958] Browser LOG     📋 Session language (full locale): en-US
+[00:09:50.958] Browser LOG     📋 STT language code: en
+[00:09:50.958] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:09:50.958] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:50.958] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:50.958] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:50.958] Browser LOG     🎬 startSession function called
+[00:09:50.958] Browser LOG     🎭 Starting HeyGen session...
+[00:09:50.958] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:09:50.958] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:09:50.958] Browser LOG     📊 Session state at start: inactive
+[00:09:50.958] Browser LOG     🔑 Fetching HeyGen token...
+[00:09:50.958] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:09:51.177] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:51.177] Browser LOG     ⏸️ Waiting for session config...
+[00:09:51.177] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:09:51.177] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:09:51.177] Browser LOG     🌍 Selected language: en-US
+[00:09:51.177] Browser LOG     📝 Using language code for STT: en
+[00:09:51.177] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:51.177] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:09:51.177] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:09:51.177] Browser LOG        - Language for KB: en-US
+[00:09:51.177] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:09:51.177] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:09:51.177] Browser LOG        - Is HeyGen KB: false
+[00:09:51.177] Browser LOG        - Cached: false
+[00:09:51.177] Browser LOG     📋 Session language (full locale): en-US
+[00:09:51.177] Browser LOG     📋 STT language code: en
+[00:09:51.177] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:09:51.177] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:51.177] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:51.177] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:51.177] Browser LOG     🎬 startSession function called
+[00:09:51.177] Browser LOG     🎭 Starting HeyGen session...
+[00:09:51.177] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:09:51.177] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:09:51.177] Browser LOG     📊 Session state at start: inactive
+[00:09:51.177] Browser LOG     🔑 Fetching HeyGen token...
+[00:09:51.177] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:09:51.472] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:51.472] Browser LOG     ⏸️ Waiting for session config...
+[00:09:51.472] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:09:51.472] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:09:51.472] Browser LOG     🌍 Selected language: en-US
+[00:09:51.472] Browser LOG     📝 Using language code for STT: en
+[00:09:51.472] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:09:51.472] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:09:51.472] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:09:51.472] Browser LOG        - Language for KB: en-US
+[00:09:51.472] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:09:51.472] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:09:51.472] Browser LOG        - Is HeyGen KB: false
+[00:09:51.472] Browser LOG        - Cached: false
+[00:09:51.472] Browser LOG     📋 Session language (full locale): en-US
+[00:09:51.472] Browser LOG     📋 STT language code: en
+[00:09:51.472] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:09:51.472] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:51.472] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:09:51.472] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:09:51.472] Browser LOG     🎬 startSession function called
+[00:09:51.472] Browser LOG     🎭 Starting HeyGen session...
+[00:09:51.472] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:09:51.472] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:09:51.472] Browser LOG     📊 Session state at start: inactive
+[00:09:51.472] Browser LOG     🔑 Fetching HeyGen token...
+[00:09:51.472] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:10:30.215] Browser LOG     🔍 Building transcript for saving: {"messageTimesCount":0,"messagesCount":0,"sessionTime":38,"transcriptStateLength":0}
+[00:10:30.215] Browser LOG     📝 Fresh transcript built: {"interviewerCount":0,"length":0,"sampleEntries":[],"witnessCount":0}
+[00:10:30.215] Browser LOG     ✅ Final transcript to save: {"length":0,"source":"empty"}
+[00:10:30.215] Browser ERROR   ❌ Cannot save session: transcript is empty
+[00:10:30.215] Browser ERROR      Messages count: 0
+[00:10:30.215] Browser ERROR      Messages: []
+[00:10:30.215] Browser ERROR      Transcript state length: 0
+[00:10:30.215] Browser ERROR      Fresh transcript length: 0
+[00:10:30.215] Browser LOG     🧹 useEffect cleanup: setting cancelled flag
+[00:10:30.215] Browser LOG     ✅ Auth loaded and authenticated, loading session report...
+[00:10:30.215] Browser LOG     📊 Loading session report for: 271c6811-377f-4e5c-9add-28d429420c5e
+[00:10:30.215] Browser LOG     ✅ Session loaded from API
+[00:10:30.215] Browser LOG        Transcript length from API: 0
+[00:10:30.215] Browser WARN    ⚠️ API session has no transcript, checking localStorage...
+[00:10:30.215] Browser LOG     ⚠️ No report found, generating analysis...
+[00:10:30.215] Browser LOG     🔍 Generating analysis for session...
+[00:10:30.215] Browser LOG        Transcript entries: 0
+[00:10:30.215] Browser WARN    ⚠️ No transcript available, returning empty analysis
+[00:10:40.812] Browser LOG     📄 Opening print dialog for PDF export...
+[00:11:18.623] Browser LOG     📚 No file uploaded, using default knowledge base
+[00:11:18.623] Browser LOG     ✅ Using default knowledge base, ID: 00000000-0000-0000-0000-000000000001
+[00:11:18.623] Browser LOG        - Default KB: Legal Interview Protocol
+[00:11:18.623] Browser LOG        - This KB will be converted to HeyGen KB when session starts
+[00:11:18.623] Browser LOG        - KB ID will be stored in session as knowledgeBaseId
+[00:11:18.623] Browser LOG     🔍 Pre-session creation check - kbId: 00000000-0000-0000-0000-000000000001
+[00:11:18.623] Browser LOG     📝 Creating session with data: {"avatarId":"Dexter_Lawyer_Sitting_public","difficulty":"medium","knowledgeBaseId":"00000000-0000-0000-0000-000000000001","language":"en-US","quality":"medium","userId":"1"}
+[00:11:18.623] Browser LOG     📚 Session will be created with knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:11:18.623] Browser LOG     ✅ Session created: {"session":{"avatarId":"Dexter_Lawyer_Sitting_public","difficulty":"medium","id":"1b039860-cd65-4314-848d-5631628c20c5","knowledgeBaseId":"00000000-0000-0000-0000-000000000001","language":"en-US","name":"Session 12/15/2025, 1:36:50 AM","quality":"medium","startTime":"2025-12-14T22:36:50.858Z","transcript":[],"userId":"1"},"success":true,"timestamp":"2025-12-14T22:36:50.858Z"}
+[00:11:18.623] Browser LOG     💾 Session stored in localStorage
+[00:11:18.623] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:11:18.623] Browser LOG     ⏸️ Waiting for session config...
+[00:11:18.623] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:11:18.623] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:11:18.623] Browser LOG     🌍 Selected language: en-US
+[00:11:18.623] Browser LOG     📝 Using language code for STT: en
+[00:11:18.623] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:11:18.623] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:11:18.623] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:11:18.623] Browser LOG        - Language for KB: en-US
+[00:11:18.623] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:11:18.623] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:11:18.623] Browser LOG        - Is HeyGen KB: false
+[00:11:18.623] Browser LOG        - Cached: false
+[00:11:18.623] Browser LOG     📋 Session language (full locale): en-US
+[00:11:18.623] Browser LOG     📋 STT language code: en
+[00:11:18.623] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:11:18.623] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:11:18.623] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:11:18.623] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:11:18.623] Browser LOG     🎬 startSession function called
+[00:11:18.623] Browser LOG     🎭 Starting HeyGen session...
+[00:11:18.623] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:11:18.623] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:11:18.623] Browser LOG     📊 Session state at start: inactive
+[00:11:18.623] Browser LOG     🔑 Fetching HeyGen token...
+[00:11:18.623] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:11:26.123] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":false,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:11:26.123] Browser LOG     ⏸️ Waiting for session config...
+[00:11:26.123] Browser LOG     🎭 StreamingAvatarProvider initialized with basePath: https://api.heygen.com
+[00:11:26.123] Browser LOG     💾 Session loaded from API and saved to localStorage
+[00:11:26.123] Browser LOG     🌍 Selected language: en-US
+[00:11:26.123] Browser LOG     📝 Using language code for STT: en
+[00:11:26.123] Browser LOG     📚 Session knowledgeBaseId: 00000000-0000-0000-0000-000000000001
+[00:11:26.123] Browser LOG     🔄 Converting knowledge base to HeyGen KB: 00000000-0000-0000-0000-000000000001
+[00:11:26.123] Browser LOG        - KB ID format: UUID format (likely uploaded/default)
+[00:11:26.123] Browser LOG        - Language for KB: en-US
+[00:11:26.123] Browser LOG     📋 Convert KB response: {"cached":false,"isHeyGenKB":false,"knowledgeId":"00000000-0000-0000-0000-000000000001","message":"Default KB - will be handled by session creation","success":true}
+[00:11:26.123] Browser LOG     ✅ Converted to HeyGen KB ID: 00000000-0000-0000-0000-000000000001
+[00:11:26.123] Browser LOG        - Is HeyGen KB: false
+[00:11:26.123] Browser LOG        - Cached: false
+[00:11:26.123] Browser LOG     📋 Session language (full locale): en-US
+[00:11:26.123] Browser LOG     📋 STT language code: en
+[00:11:26.123] Browser LOG     📋 Session config created: {"avatarName":"Dexter_Lawyer_Sitting_public","hasKnowledgeId":true,"quality":"medium"}
+[00:11:26.123] Browser LOG     📚 Global knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:11:26.123] Browser LOG     📚 Knowledge base ID set for YTL LLM: 00000000-0000-0000-0000-000000000001
+[00:11:26.123] Browser LOG     🔍 useEffect triggered: {"expectedState":"inactive","hasSessionConfig":true,"isStartingAvatar":false,"sessionState":"inactive"}
+[00:11:26.123] Browser LOG     🎬 startSession function called
+[00:11:26.123] Browser LOG     🎭 Starting HeyGen session...
+[00:11:26.123] Browser LOG     📋 Config: {
+  "quality": "medium",
+  "avatarName": "Dexter_Lawyer_Sitting_public",
+  "knowledgeId": "00000000-0000-0000-0000-000000000001",
+  "language": "en",
+  "voiceChatTransport": "websocket",
+  "voice": {
+    "rate": 1.15,
+    "emotion": "excited",
+    "model": "eleven_flash_v2_5"
+  },
+  "sttSettings": {
+    "provider": "deepgram"
+  }
+}
+[00:11:26.123] Browser LOG     🌐 Base path: https://api.heygen.com
+[00:11:26.123] Browser LOG     📊 Session state at start: inactive
+[00:11:26.123] Browser LOG     🔑 Fetching HeyGen token...
+[00:11:26.123] Browser ERROR   ❌ Token fetch failed: 500 {"success":false,"error":"Missing HEYGEN_API_KEY in environment"}
+[00:11:27.837] Browser LOG     🔍 Building transcript for saving: {"messageTimesCount":0,"messagesCount":0,"sessionTime":1,"transcriptStateLength":0}
+[00:11:27.837] Browser LOG     📝 Fresh transcript built: {"interviewerCount":0,"length":0,"sampleEntries":[],"witnessCount":0}
+[00:11:27.837] Browser LOG     ✅ Final transcript to save: {"length":0,"source":"empty"}
+[00:11:27.837] Browser ERROR   ❌ Cannot save session: transcript is empty
+[00:11:27.837] Browser ERROR      Messages count: 0
+[00:11:27.837] Browser ERROR      Messages: []
+[00:11:27.837] Browser ERROR      Transcript state length: 0
+[00:11:27.837] Browser ERROR      Fresh transcript length: 0
+[00:11:27.837] Browser LOG     🧹 useEffect cleanup: setting cancelled flag
+[00:11:27.837] Browser LOG     ✅ Auth loaded and authenticated, loading session report...
+[00:11:27.837] Browser LOG     📊 Loading session report for: 1b039860-cd65-4314-848d-5631628c20c5
+[00:11:27.837] Browser LOG     ✅ Session loaded from API
+[00:11:27.837] Browser LOG        Transcript length from API: 0
+[00:11:27.837] Browser WARN    ⚠️ API session has no transcript, checking localStorage...
+[00:11:27.837] Browser LOG     ⚠️ No report found, generating analysis...
+[00:11:27.837] Browser LOG     🔍 Generating analysis for session...
+[00:11:27.837] Browser LOG        Transcript entries: 0
+[00:11:27.837] Browser WARN    ⚠️ No transcript available, returning empty analysis
+[00:14:00.878] Browser LOG     LOGIN PAGE MOUNTED
