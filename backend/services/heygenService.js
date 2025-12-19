@@ -533,13 +533,15 @@ class HeyGenService {
       return true;
     }
 
+    const sessionIdToClean = this.sessionId;
+
     try {
-      console.log('🎭 Ending HeyGen session:', this.sessionId);
+      console.log('🎭 Ending HeyGen session:', sessionIdToClean);
 
       const response = await axios.post(
         `${this.baseURL}/v1/streaming.stop`,
         {
-          session_id: this.sessionId,
+          session_id: sessionIdToClean,
         },
         {
           headers: {
@@ -555,35 +557,35 @@ class HeyGenService {
       } else {
         console.error('HeyGen end session error:', response.status, response.data);
       }
-
-      // Clean up session-specific data
-      const sessionIdToClean = this.sessionId;
-
-      // Stop keep-alive mechanism
-      this.stopSessionKeepAlive(sessionIdToClean);
-
-      this.sessionTokens.delete(sessionIdToClean);
-      this.sessionMetadata.delete(sessionIdToClean);
-
-      // Clear singleton session data
-      this.sessionId = null;
-      this.sessionToken = null;
-
-      console.log('✅ Session data cleaned up for:', sessionIdToClean);
-
-      return true;
     } catch (error) {
       console.error('HeyGen end session error:', error.message);
-      // Clear session data even if there was an error
-      const sessionIdToClean = this.sessionId;
+    } finally {
+      // Always perform cleanup, including deleting the Knowledge Base
+      try {
+        // Stop keep-alive mechanism
+        this.stopSessionKeepAlive(sessionIdToClean);
 
-      // Stop keep-alive mechanism
-      this.stopSessionKeepAlive(sessionIdToClean);
+        // Check if there is a Knowledge Base associated with this session and delete it
+        const sessionData = this.sessionMetadata.get(sessionIdToClean);
+        if (sessionData && sessionData.knowledgeId) {
+          console.log('🗑️ Automatic cleanup: Deleting session Knowledge Base:', sessionData.knowledgeId);
+          await this.deleteKnowledgeBase(sessionData.knowledgeId);
+        }
 
-      this.sessionTokens.delete(sessionIdToClean);
-      this.sessionMetadata.delete(sessionIdToClean);
-      this.sessionId = null;
-      this.sessionToken = null;
+        this.sessionTokens.delete(sessionIdToClean);
+        this.sessionMetadata.delete(sessionIdToClean);
+
+        // Clear singleton session data if it matches the one we are cleaning
+        if (this.sessionId === sessionIdToClean) {
+          this.sessionId = null;
+          this.sessionToken = null;
+        }
+
+        console.log('✅ Session data cleaned up for:', sessionIdToClean);
+      } catch (cleanupError) {
+        console.error('❌ Error during session cleanup:', cleanupError.message);
+      }
+      
       return true;
     }
   }
